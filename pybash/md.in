@@ -1,0 +1,40 @@
+include md.lattice
+include md.ionpos
+
+kpoint-folding 2 2 1 
+kpoint 0.5 0.5 1.
+
+symmetries manual
+symmetry-matrix 1 0 0  0 1 0  0 0 1  0 0 0
+
+ion-species GBRV/$ID_pbe_v1.5.uspp
+ion-species GBRV/$ID_pbe_v1.4.uspp
+ion-species GBRV/$ID_pbe_v1.3.uspp
+ion-species GBRV/$ID_pbe_v1.2.uspp
+ion-species GBRV/$ID_pbe_v1.uspp
+
+elec-cutoff 20 100
+
+lcao-params 100
+electronic-minimize nIterations 500 energyDiffThreshold 1e-6
+
+elec-smearing Fermi 0.00367493085
+
+elec-ex-corr gga-PBE
+
+
+dump-name md.$VAR
+dump Ionic Lattice IonicPositions
+
+
+ionic-dynamics \
+    dt 1. \
+    nSteps 10 \
+    tDampT 100. \
+    tDampP 200. \
+    T0 300 \
+    P0 1. \
+    statMethod NoseHoover
+
+core-overlap-check none
+van-der-waals D3

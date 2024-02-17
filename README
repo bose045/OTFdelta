@@ -1,0 +1,5 @@
+run the job_sequence_npl.sh for iteration zero (starts with NNMD)
+for all other iterations, change the value of $iter in job_sequence_npl_1.sh and run
+
+
+for AIMD runs, first run dcs_prelaunch.sh to generate valid aimd run directories and then dcs_array_aimd.sh tp launch all the aimd jobs 

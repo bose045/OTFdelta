@@ -1,0 +1,44 @@
+#!/bin/bash -l
+#SBATCH -J DeepPot_training
+#SBATCH -p npl
+#SBATCH -N 1
+#SBATCH -n 1
+# #SBATCH -i input.json
+#SBATCH --gres=gpu:6
+#SBATCH -o jobfile.%j
+#SBATCH -e deepMDtrain.%j
+
+#---------Modules to load-----------------------------------------------------------------------------------------
+module load gcc/8.4.0/1 cuda/10.2 cuda/11.1 openmpi/4.0.3/1
+
+source ~/scratch-shared/npl_miniconda/etc/profile.d/conda.sh
+conda activate deepmd_gpu
+echo "conda deepmd_gpu activated"
+#---------Job description
+
+export OMP_NUM_THREADS=40 # Hyperthreading
+
+echo "STARTING"
+GPU_COUNT=6  # Total number of GPUs available on the node
+
+for DIR in seed*/; do
+    # Calculate which GPU to use
+    GPU_ID=$((GPU_INDEX % GPU_COUNT))
+    echo "Entering directory $DIR"
+    cd $DIR
+
+    # Assign the training process to a specific GPU
+    echo "Starting training in $DIR on GPU $GPU_ID"
+    CUDA_VISIBLE_DEVICES=$GPU_ID srun --gres=gpu:1 dp train input.json &
+    
+    # Increment GPU index for the next iteration
+    GPU_INDEX=$((GPU_INDEX + 1))
+
+    cd ..
+done
+
+echo "All trainings initiated, waiting for background processes to finish..."
+wait
+echo "All trainings completed."
+
+touch doneTrainingFlag

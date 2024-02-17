@@ -1,0 +1,201 @@
+Lmod has detected the following error: These module(s) or extension(s) exist
+but cannot be loaded as requested: "openmpi/4.0.3/1"
+   Try: "module spider openmpi/4.0.3/1" to see how to load the module(s).
+
+
+
+WARNING:tensorflow:From /gpfs/u/home/XXXX/XXXXmyfd/scratch-shared/npl_miniconda/envs/deepmd_gpu/lib/python3.10/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+WARNING:root:To get the best performance, it is recommended to adjust the number of threads by setting the environment variables OMP_NUM_THREADS, TF_INTRA_OP_PARALLELISM_THREADS, and TF_INTER_OP_PARALLELISM_THREADS. See https://deepmd.rtfd.io/parallelism/ for more information.
+WARNING:root:Environment variable KMP_BLOCKTIME is empty. Use the default value 0
+WARNING:root:Environment variable KMP_AFFINITY is empty. Use the default value granularity=fine,verbose,compact,1,0
+/gpfs/u/home/XXXX/XXXXmyfd/scratch-shared/npl_miniconda/envs/deepmd_gpu/lib/python3.10/importlib/__init__.py:169: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+  _bootstrap._exec(spec, module)
+DEEPMD INFO    Calculate neighbor statistics... (add --skip-neighbor-stat to skip this step)
+OMP: Info #155: KMP_AFFINITY: Initial OS proc set respected: 4,5,12,13,16,20-24,44,45,52,53,56,60-64
+OMP: Info #216: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #157: KMP_AFFINITY: 20 available OS procs
+OMP: Info #158: KMP_AFFINITY: Uniform topology
+OMP: Info #287: KMP_AFFINITY: topology layer "LL cache" is equivalent to "socket".
+OMP: Info #287: KMP_AFFINITY: topology layer "L3 cache" is equivalent to "socket".
+OMP: Info #287: KMP_AFFINITY: topology layer "L2 cache" is equivalent to "core".
+OMP: Info #287: KMP_AFFINITY: topology layer "L1 cache" is equivalent to "core".
+OMP: Info #192: KMP_AFFINITY: 2 sockets x 5 cores/socket x 2 threads/core (10 total cores)
+OMP: Info #218: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #172: KMP_AFFINITY: OS proc 4 maps to socket 0 core 4 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 44 maps to socket 0 core 4 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 5 maps to socket 0 core 8 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 45 maps to socket 0 core 8 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 12 maps to socket 0 core 18 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 52 maps to socket 0 core 18 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 13 maps to socket 0 core 19 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 53 maps to socket 0 core 19 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 16 maps to socket 0 core 25 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 56 maps to socket 0 core 25 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 20 maps to socket 1 core 0 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 60 maps to socket 1 core 0 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 21 maps to socket 1 core 1 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 61 maps to socket 1 core 1 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 22 maps to socket 1 core 2 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 62 maps to socket 1 core 2 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 23 maps to socket 1 core 3 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 63 maps to socket 1 core 3 thread 1 
+OMP: Info #172: KMP_AFFINITY: OS proc 24 maps to socket 1 core 4 thread 0 
+OMP: Info #172: KMP_AFFINITY: OS proc 64 maps to socket 1 core 4 thread 1 
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14581 thread 0 bound to OS proc set 4
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14584 thread 1 bound to OS proc set 5
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14585 thread 2 bound to OS proc set 12
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14586 thread 3 bound to OS proc set 13
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14587 thread 4 bound to OS proc set 16
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14588 thread 5 bound to OS proc set 20
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14589 thread 6 bound to OS proc set 21
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14590 thread 7 bound to OS proc set 22
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14591 thread 8 bound to OS proc set 23
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14592 thread 9 bound to OS proc set 24
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14593 thread 10 bound to OS proc set 44
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14594 thread 11 bound to OS proc set 45
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14595 thread 12 bound to OS proc set 52
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14596 thread 13 bound to OS proc set 53
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14597 thread 14 bound to OS proc set 56
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14598 thread 15 bound to OS proc set 60
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14599 thread 16 bound to OS proc set 61
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14600 thread 17 bound to OS proc set 62
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14601 thread 18 bound to OS proc set 63
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14602 thread 19 bound to OS proc set 64
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14603 thread 20 bound to OS proc set 4
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14604 thread 21 bound to OS proc set 5
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14606 thread 23 bound to OS proc set 13
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14605 thread 22 bound to OS proc set 12
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14607 thread 24 bound to OS proc set 16
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14608 thread 25 bound to OS proc set 20
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14609 thread 26 bound to OS proc set 21
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14610 thread 27 bound to OS proc set 22
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14611 thread 28 bound to OS proc set 23
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14612 thread 29 bound to OS proc set 24
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14613 thread 30 bound to OS proc set 44
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14614 thread 31 bound to OS proc set 45
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14615 thread 32 bound to OS proc set 52
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14616 thread 33 bound to OS proc set 53
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14617 thread 34 bound to OS proc set 56
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14618 thread 35 bound to OS proc set 60
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14619 thread 36 bound to OS proc set 61
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14620 thread 37 bound to OS proc set 62
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14621 thread 38 bound to OS proc set 63
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14622 thread 39 bound to OS proc set 64
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14582 thread 40 bound to OS proc set 4
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14623 thread 41 bound to OS proc set 5
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14624 thread 42 bound to OS proc set 12
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14625 thread 43 bound to OS proc set 13
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14626 thread 44 bound to OS proc set 16
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14627 thread 45 bound to OS proc set 20
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14628 thread 46 bound to OS proc set 21
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14629 thread 47 bound to OS proc set 22
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14630 thread 48 bound to OS proc set 23
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14631 thread 49 bound to OS proc set 24
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14632 thread 50 bound to OS proc set 44
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14633 thread 51 bound to OS proc set 45
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14634 thread 52 bound to OS proc set 52
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14635 thread 53 bound to OS proc set 53
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14636 thread 54 bound to OS proc set 56
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14637 thread 55 bound to OS proc set 60
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14638 thread 56 bound to OS proc set 61
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14639 thread 57 bound to OS proc set 62
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14640 thread 58 bound to OS proc set 63
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14641 thread 59 bound to OS proc set 64
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14642 thread 60 bound to OS proc set 4
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14643 thread 61 bound to OS proc set 5
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14644 thread 62 bound to OS proc set 12
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14645 thread 63 bound to OS proc set 13
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14646 thread 64 bound to OS proc set 16
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14647 thread 65 bound to OS proc set 20
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14648 thread 66 bound to OS proc set 21
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14649 thread 67 bound to OS proc set 22
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14650 thread 68 bound to OS proc set 23
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14651 thread 69 bound to OS proc set 24
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14652 thread 70 bound to OS proc set 44
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14653 thread 71 bound to OS proc set 45
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14654 thread 72 bound to OS proc set 52
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14655 thread 73 bound to OS proc set 53
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14656 thread 74 bound to OS proc set 56
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14657 thread 75 bound to OS proc set 60
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14658 thread 76 bound to OS proc set 61
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14659 thread 77 bound to OS proc set 62
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14660 thread 78 bound to OS proc set 63
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14661 thread 79 bound to OS proc set 64
+DEEPMD INFO    training data with min nbor dist: 0.8903247604286768
+DEEPMD INFO    training data with max nbor size: [11 22 67 35 50  5]
+DEEPMD INFO     _____               _____   __  __  _____           _     _  _   
+DEEPMD INFO    |  __ \             |  __ \ |  \/  ||  __ \         | |   (_)| |  
+DEEPMD INFO    | |  | |  ___   ___ | |__) || \  / || |  | | ______ | | __ _ | |_ 
+DEEPMD INFO    | |  | | / _ \ / _ \|  ___/ | |\/| || |  | ||______|| |/ /| || __|
+DEEPMD INFO    | |__| ||  __/|  __/| |     | |  | || |__| |        |   < | || |_ 
+DEEPMD INFO    |_____/  \___| \___||_|     |_|  |_||_____/         |_|\_\|_| \__|
+DEEPMD INFO    Please read and cite:
+DEEPMD INFO    Wang, Zhang, Han and E, Comput.Phys.Comm. 228, 178-184 (2018)
+DEEPMD INFO    Zeng et al, J. Chem. Phys., 159, 054801 (2023)
+DEEPMD INFO    See https://deepmd.rtfd.io/credits/ for details.
+DEEPMD INFO    installed to:         /gpfs/u/home/XXXX/XXXXmyfd/scratch-shared/npl_miniconda/envs/deepmd_gpu
+DEEPMD INFO    source :              v2.2.5
+DEEPMD INFO    source brach:         HEAD
+DEEPMD INFO    source commit:        477b7856
+DEEPMD INFO    source commit at:     2023-09-27 09:35:45 +0800
+DEEPMD INFO    build float prec:     double
+DEEPMD INFO    build variant:        cuda
+DEEPMD INFO    build with tf inc:    /gpfs/u/home/XXXX/XXXXmyfd/scratch-shared/npl_miniconda/envs/deepmd_gpu/lib/python3.10/site-packages/tensorflow/include/;/gpfs/u/home/XXXX/XXXXmyfd/scratch-shared/npl_miniconda/envs/deepmd_gpu/include
+DEEPMD INFO    build with tf lib:    
+DEEPMD INFO    ---Summary of the training---------------------------------------
+DEEPMD INFO    running on:           npl01
+DEEPMD INFO    computing device:     gpu:0
+DEEPMD INFO    CUDA_VISIBLE_DEVICES: 2,6
+DEEPMD INFO    Count of visible GPU: 2
+DEEPMD INFO    num_intra_threads:    0
+DEEPMD INFO    num_inter_threads:    0
+DEEPMD INFO    -----------------------------------------------------------------
+DEEPMD INFO    ---Summary of DataSystem: training     -----------------------------------------------
+DEEPMD INFO    found 3 system(s):
+DEEPMD INFO                                        system  natoms  bch_sz   n_bch   prob  pbc
+DEEPMD INFO                 ../train/data/C0F0H68O34Pt0S0     102       1       2  0.077    T
+DEEPMD INFO               ../train/data/C6F14H48O31Pt36S2     137       1       4  0.154    T
+DEEPMD INFO                ../train/data/C9F21H51O37Pt0S3     121       1      20  0.769    T
+DEEPMD INFO    --------------------------------------------------------------------------------------
+DEEPMD INFO    training without frame parameter
+DEEPMD INFO    data stating... (this step may take long time)
+OMP: Info #254: KMP_AFFINITY: pid 14488 tid 14488 thread 80 bound to OS proc set 4
+DEEPMD INFO    built lr
+DEEPMD INFO    built network
+DEEPMD INFO    built training
+DEEPMD INFO    initialize model from scratch
+DEEPMD INFO    start training at lr 1.00e-03 (== 1.00e-03), decay_step 100, decay_rate 0.598777, final lr will be 3.51e-08
+WARNING:tensorflow:From /gpfs/u/home/XXXX/XXXXmyfd/scratch-shared/npl_miniconda/envs/deepmd_gpu/lib/python3.10/site-packages/deepmd/train/trainer.py:1197: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+WARNING:tensorflow:From /gpfs/u/home/XXXX/XXXXmyfd/scratch-shared/npl_miniconda/envs/deepmd_gpu/lib/python3.10/site-packages/deepmd/train/trainer.py:1197: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+DEEPMD INFO    batch    1000 training time 74.07 s, testing time 0.02 s, total wall time 78.01 s
+DEEPMD INFO    batch    2000 training time 63.04 s, testing time 0.02 s, total wall time 63.54 s
+DEEPMD INFO    saved checkpoint model.ckpt
+DEEPMD INFO    average training time: 0.0630 s/batch (exclude first 1000 batches)
+DEEPMD INFO    finished training
+DEEPMD INFO    wall time: 224.116 s

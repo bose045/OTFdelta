@@ -1,0 +1,106 @@
+from ase import units
+from ase.md.langevin import Langevin
+from ase.io import read, write
+from ase.io.lammpsdata import read_lammps_data
+from ase.io.lammpsdata import read_lammps_data
+import numpy as np
+import time
+import sys
+import os
+from ase import Atom, Atoms
+from ase.build import bulk
+
+from ase.md.velocitydistribution import MaxwellBoltzmannDistribution
+
+from ase.calculators.lammpsrun import LAMMPS
+# from deepmd.calculator import DP
+from ase.calculators.mixing import SumCalculator
+#from ase.calculators.jdftx import JDFTx
+
+from mace.calculators import MACECalculator
+import glob
+model_path='/gpfs/u/home/XXXX/XXXXxxxx/scratch-shared/PolyGroup/AIMDtoNN/PolyMC5_Iter1to12data/MACE_model.model'
+file_pattern = 'md*.xyz'
+
+# File to append to
+cat_file = 'data.xyz'
+
+with open(cat_file, 'w') as outfile:
+    for filename in glob.glob(file_pattern):
+        with open(filename, 'r') as infile:
+            # Append the content of each file to the output file
+            outfile.write(infile.read() + '\n')
+
+# PB and KF conversation:
+# read in a frame
+#Loop over each fram:
+frames = read('data.xyz', ':')
+deviation=[]
+averages = []
+max_deviations = []
+candidate_frames = []
+for frame in frames:
+    print(frame)
+    # calculate F E with three diff DELTA mace models
+    MCcalc1 = MACECalculator(model_path=model_path, device='cuda')
+    MCcalc2 = MACECalculator(model_path=model_path, device='cuda')
+    MCcalc3 = MACECalculator(model_path=model_path, device='cuda')
+
+    # we don't need sum calculator bc eval the model 
+    # lammps is constant among all 3
+    frame.calc=MCcalc1
+    f1 = frame.get_forces()
+    print(f1)
+    frame.calc=MCcalc2
+    f2 = frame.get_forces()
+    frame.calc=MCcalc3
+    f3 = frame.get_forces()
+    
+    #deviation_f1_f2 = np.linalg.norm(f1 - f2, axis=1)
+    #deviation_f1_f3 = np.linalg.norm(f1 - f3, axis=1)
+
+    # Sum or average these deviations to get a single value representing the overall deviation
+    #total_deviation = np.sum(deviation_f1_f2) + np.sum(deviation_f1_f3)
+    # or
+    #deviation = np.mean(deviation_f1_f2) + np.mean(deviation_f1_f3)
+    deviation = 0
+    # use the same implementation as deepmd
+    #deviation=np.linalg.norm(np.linalg.norm(f1 - f2), np.linalg.norm(f1 - f3))   
+    # Append the deviation to the list
+    #deviations.append(deviation)
+    if deviation >=0 and deviation <=100:
+        candidate_frames.append(frame)
+    # Calculate the average and maximum deviation up to the current frame
+    average_deviation = np.mean(deviation)
+    max_deviation = np.max(deviation)
+    averages.append(average_deviation)
+    max_deviations.append(max_deviation)
+
+with open('candidates.xyz','w') as file:
+    for frame in candidate_frames:
+        file.write(str(frame)+'\n')
+
+for i, frame in enumerate(frames):
+    print(f"Frame {i}:")
+    #print(f"  Deviation: {deviations[i]:.4f}")
+    print(f"  Average Deviation: {averages[i]:.4f}")
+    print(f"  Max Deviation: {max_deviations[i]:.4f}")
+# https://github.com/deepmodeling/deepmd-kit/blob/master/deepmd/infer/model_devi.py
+
+# atdone.set_chemical_symbols('Pt'*36+'S'*2+'O'*31+'C'*6+'F'*14+'H'*48)
+# atdone.write('md2.xyz','')
+
+
+# from mace.calculators import MACECalculator
+
+# calculator = MACECalculator(model_path='/global/homes/k/kamron/Scratch/AIMDtoNN/Poly/PolyMC2wHighP/MACE_model.model', device='cuda')
+# init_conf = read('/global/homes/k/kamron/Scratch/NNmd/Poly/MC3polyPtWater/500deg300rot.xyz', '0')
+# # init_conf = read('BOTNet-datasets/dataset_3BPA/test_300K.xyz', '0')
+# init_conf.set_calculator(calculator)
+
+# dyn = Langevin(init_conf, 0.5*units.fs, temperature_K=310, friction=5e-3)
+# def write_frame():
+#         dyn.atoms.write('md.xyz', append=True)
+# dyn.attach(write_frame, interval=20)
+# dyn.run(2e3)
+# print("MD finished!")

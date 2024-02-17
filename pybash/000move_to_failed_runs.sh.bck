@@ -1,0 +1,3 @@
+#!/bin/bash/
+mkdir failed_runs
+find /gpfs/u/home/XXXX/XXXXxxxx/scratch-shared/PolyGroup/AIMDtoNN/OTF1_Iter12data/ -type f -name '*.jdftxout' -size -150k -exec mv {} /gpfs/u/home/XXXX/XXXXxxxx/scratch-shared/PolyGroup/AIMDtoNN/OTF1_Iter12data/failed_runs \;

@@ -1,0 +1,8 @@
+total 6
+lrwxrwxrwx 1 XXXXxxxx XXXX   26 Oct 18 10:46 barn -> /gpfs/u/barn/XXXX/XXXXxxxx
+lrwxrwxrwx 1 XXXXxxxx XXXX   24 Oct 18 10:46 barn-shared -> /gpfs/u/barn/XXXX/shared
+drwxr-xr-x 2 XXXXxxxx XXXX 4096 Oct 26 22:52 bin
+lrwxrwxrwx 1 XXXXxxxx XXXX   55 Nov  9 11:41 mace -> /gpfs/u/home/XXXX/XXXXxxxx/scratch-shared/MACE/mace_git
+lrwxrwxrwx 1 XXXXxxxx XXXX   29 Oct 18 10:46 scratch -> /gpfs/u/scratch/XXXX/XXXXxxxx
+lrwxrwxrwx 1 XXXXxxxx XXXX   27 Oct 18 10:46 scratch-shared -> /gpfs/u/scratch/XXXX/shared
+SSH command executed successfully.

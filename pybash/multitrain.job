@@ -1,0 +1,48 @@
+#!/bin/bash -l
+#SBATCH -J DeepPot_training
+#SBATCH -p npl
+#SBATCH -N 1
+#SBATCH -n 1
+# #SBATCH -i input.json
+#SBATCH --gres=gpu:6
+#SBATCH -o jobfile.%j
+#SBATCH -e deepMDtrain.%j
+
+#---------Modules to load-----------------------------------------------------------------------------------------
+module load gcc/8.4.0/1 cuda/10.2 cuda/11.1 openmpi/4.0.3/1
+
+source ~/scratch-shared/npl_miniconda/etc/profile.d/conda.sh
+conda activate deepmd_gpu
+echo "conda deepmd_gpu activated"
+#---------Job description
+
+export OMP_NUM_THREADS=40 # Hyperthreading
+
+# run with up to 4 total trainings at once 4 gpus per node
+echo "STARTING"
+for DIR in seed*/; do
+    echo "Entering directory $DIR"
+    cd $DIR
+    #srun --exact -n 1 --gpu-bind=none --gpus-per-task 1 -c 16 --mem-per-cpu=3gb --hint=nomultithread \
+    #dp train input.json --init-frz-model frozenModel.pb &
+    #srun dp train input.json --init-frz-model frozenModel.pb &
+    echo "starting training in $DIR"
+    srun dp train input.json
+    echo "Training completed in $DIR"
+    cd ..
+
+    #if ls model.ckpt.* 1> /dev/null 2>&1; then
+    ## Restart job
+    #srun dp train --restart model.ckpt input.json # Restart training
+    #else
+    # Initial
+    #srun dp train input.json # Fresh training
+    #fi
+done
+echo "All trainings completed, waiting for background processes to finish..."
+wait
+
+touch doneTrainingFlag
+
+echo 'DONE RUNNING!!'
+conda deactivate

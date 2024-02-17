@@ -1,0 +1,38 @@
+units                   metal
+boundary                p p p
+atom_style              full
+
+bond_style harmonic
+#angle_style harmonic
+#dihedral_style harmonic
+
+
+read_data               ${struc}
+# pair_style lj/cut 5.0
+# include                 VDW_LAMMPS_MD
+
+# pair_modify tail yes
+# special_bonds	lj/coul 0 0 1.0
+
+#neigh_modify exclude type 4 5
+#neigh_modify exclude type 5 5
+
+
+#pair_coeff 1 2 lj/cut 0.0373 3.261
+
+#plugin load libdeepmd_lmp.so
+#pair_style deepmd DpmdPBED2_potential.pb
+#pair_coeff  * *    
+
+thermo          1
+thermo_style    custom step pe vol press temp 
+thermo_modify	norm no
+
+# timestep        0.002 #2 fs
+
+fix		1 all nve 
+
+dump            0 all custom 1 ${base}.dump id type element x y z fx fy fz
+dump_modify     0 element C F H O Pt S
+run             0 # thermo calculated without taking a timestep
+

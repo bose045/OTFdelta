@@ -1,0 +1,183 @@
+ step=1
+./sys0_run0011_0004_0000.jdftxout_Delta.jdftxout
+atom_dict={'C': 0, 'F': 1, 'H': 2, 'O': 3, 'Pt': 4, 'S': 5}
+atom map fixed
+np.copy fixed version
+Data Summary
+Labeled System
+-------------------
+Frame Numbers      : 2
+Atom Numbers       : 137
+Including Virials  : No
+Element List       :
+-------------------
+C  F  H  O  Pt  S
+6  14  48  31  36  2
+./sys0_run0011_0004_0001.jdftxout_Delta.jdftxout
+atom_dict={'C': 0, 'F': 1, 'H': 2, 'O': 3, 'Pt': 4, 'S': 5}
+atom map fixed
+np.copy fixed version
+Data Summary
+Labeled System
+-------------------
+Frame Numbers      : 2
+Atom Numbers       : 137
+Including Virials  : No
+Element List       :
+-------------------
+C  F  H  O  Pt  S
+6  14  48  31  36  2
+./sys1_run0011_0004_0000.jdftxout_Delta.jdftxout
+atom_dict={'C': 0, 'F': 1, 'H': 2, 'O': 3, 'S': 4}
+atom map fixed
+np.copy fixed version
+Data Summary
+Labeled System
+-------------------
+Frame Numbers      : 2
+Atom Numbers       : 121
+Including Virials  : No
+Element List       :
+-------------------
+C  F  H  O  S
+9  21  51  37  3
+./sys1_run0011_0004_0001.jdftxout_Delta.jdftxout
+atom_dict={'C': 0, 'F': 1, 'H': 2, 'O': 3, 'S': 4}
+atom map fixed
+np.copy fixed version
+Data Summary
+Labeled System
+-------------------
+Frame Numbers      : 2
+Atom Numbers       : 121
+Including Virials  : No
+Element List       :
+-------------------
+C  F  H  O  S
+9  21  51  37  3
+./sys1_run0011_0004_0002.jdftxout_Delta.jdftxout
+atom_dict={'C': 0, 'F': 1, 'H': 2, 'O': 3, 'S': 4}
+atom map fixed
+np.copy fixed version
+Data Summary
+Labeled System
+-------------------
+Frame Numbers      : 2
+Atom Numbers       : 121
+Including Virials  : No
+Element List       :
+-------------------
+C  F  H  O  S
+9  21  51  37  3
+./sys1_run0011_0004_0003.jdftxout_Delta.jdftxout
+atom_dict={'C': 0, 'F': 1, 'H': 2, 'O': 3, 'S': 4}
+atom map fixed
+np.copy fixed version
+Data Summary
+Labeled System
+-------------------
+Frame Numbers      : 2
+Atom Numbers       : 121
+Including Virials  : No
+Element List       :
+-------------------
+C  F  H  O  S
+9  21  51  37  3
+./sys1_run0011_0004_0004.jdftxout_Delta.jdftxout
+atom_dict={'C': 0, 'F': 1, 'H': 2, 'O': 3, 'S': 4}
+atom map fixed
+np.copy fixed version
+Data Summary
+Labeled System
+-------------------
+Frame Numbers      : 2
+Atom Numbers       : 121
+Including Virials  : No
+Element List       :
+-------------------
+C  F  H  O  S
+9  21  51  37  3
+./sys1_run0011_0004_0005.jdftxout_Delta.jdftxout
+atom_dict={'C': 0, 'F': 1, 'H': 2, 'O': 3, 'S': 4}
+atom map fixed
+np.copy fixed version
+Data Summary
+Labeled System
+-------------------
+Frame Numbers      : 2
+Atom Numbers       : 121
+Including Virials  : No
+Element List       :
+-------------------
+C  F  H  O  S
+9  21  51  37  3
+./sys1_run0011_0004_0006.jdftxout_Delta.jdftxout
+atom_dict={'C': 0, 'F': 1, 'H': 2, 'O': 3, 'S': 4}
+atom map fixed
+np.copy fixed version
+Data Summary
+Labeled System
+-------------------
+Frame Numbers      : 2
+Atom Numbers       : 121
+Including Virials  : No
+Element List       :
+-------------------
+C  F  H  O  S
+9  21  51  37  3
+./sys1_run0011_0004_0007.jdftxout_Delta.jdftxout
+atom_dict={'C': 0, 'F': 1, 'H': 2, 'O': 3, 'S': 4}
+atom map fixed
+np.copy fixed version
+Data Summary
+Labeled System
+-------------------
+Frame Numbers      : 2
+Atom Numbers       : 121
+Including Virials  : No
+Element List       :
+-------------------
+C  F  H  O  S
+9  21  51  37  3
+./sys1_run0011_0004_0008.jdftxout_Delta.jdftxout
+atom_dict={'C': 0, 'F': 1, 'H': 2, 'O': 3, 'S': 4}
+atom map fixed
+np.copy fixed version
+Data Summary
+Labeled System
+-------------------
+Frame Numbers      : 2
+Atom Numbers       : 121
+Including Virials  : No
+Element List       :
+-------------------
+C  F  H  O  S
+9  21  51  37  3
+./sys1_run0011_0004_0009.jdftxout_Delta.jdftxout
+atom_dict={'C': 0, 'F': 1, 'H': 2, 'O': 3, 'S': 4}
+atom map fixed
+np.copy fixed version
+Data Summary
+Labeled System
+-------------------
+Frame Numbers      : 2
+Atom Numbers       : 121
+Including Virials  : No
+Element List       :
+-------------------
+C  F  H  O  S
+9  21  51  37  3
+./sys2_run0011_0004_0008.jdftxout_Delta.jdftxout
+atom_dict={'H': 0, 'O': 1}
+atom map fixed
+np.copy fixed version
+Data Summary
+Labeled System
+-------------------
+Frame Numbers      : 2
+Atom Numbers       : 102
+Including Virials  : No
+Element List       :
+-------------------
+H  O
+68  34
